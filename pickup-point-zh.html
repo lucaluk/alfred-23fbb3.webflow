@@ -1,364 +1,247 @@
-<!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Thu Dec 03 2020 00:07:08 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="5f716cd1a85b92d97cd1fdc8" data-wf-site="5f0e7384784a2c612e5ffbe8">
+
 <head>
-  <meta charset="utf-8">
-  <title>Alfred智能櫃 – We Deliver, You Collect.</title>
-  <meta content="Pickup Point-zh" property="og:title">
-  <meta content="Pickup Point-zh" property="twitter:title">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <meta content="Webflow" name="generator">   <meta name="format-detection" content="telephone=no">
-  <link href="css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/alfred-23fbb3.webflow.css" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-  <script type="text/javascript">WebFont.load({  google: {    families: ["Oswald:200,300,400,500,600,700","Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic","Rubik:300,regular,500,700,900"]  }});</script>
-  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
-  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
-  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <link href="images/webclip.png" rel="apple-touch-icon">
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <style>
-html *{
-   font-family: Rubik !important;
-}
-body {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    }
-</style>
-<style>
-  /* .w-select {
+    <meta charset="utf-8">
+    <title>Alfred智能櫃 – We Deliver, You Collect.</title>
+    <meta content="Pickup Point-zh" property="og:title">
+    <meta content="Pickup Point-zh" property="twitter:title">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Webflow" name="generator">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/webflow.css" rel="stylesheet" type="text/css">
+    <link href="css/alfred-23fbb3.webflow.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        WebFont.load({
+            google: {
+                families: ["Oswald:200,300,400,500,600,700", "Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic", "Rubik:300,regular,500,700,900"]
+            }
+        });
+    </script>
+    <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+    <script type="text/javascript">
+        ! function(o, c) {
+            var n = c.documentElement,
+                t = " w-mod-";
+            n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
+        }(window, document);
+    </script>
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="images/webclip.png" rel="apple-touch-icon">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        html * {
+            font-family: Rubik !important;
+        }
+        
+        body {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+    <style>
+        /* .w-select {
       -webkit-appearance: none;
       -moz-appearance: none;
   } */
-  </style>
+    </style>
 </head>
+
 <body>
-  <div class="alertblock">
-    <div class="text-block chin">立即<a href="https://alfred-delivery.medium.com/alfred%E8%A9%B1%E4%BD%A0%E7%9F%A5-%E5%A6%82%E4%BD%95%E5%9C%A8%E5%85%AC%E5%8F%B8%E6%8A%97%E8%82%BA%E7%82%8E%E7%97%85%E6%AF%92-3814e2158f1a" target="_blank" class="link-2"><span class="text-span-22"><strong class="bold-text-46">按此</strong></span></a> 了解Alfred於疫情期間有什麼更新！</div>
-  </div>
-  <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
-    <div class="nav-container w-container">
-      <a href="index-zh.html" class="w-inline-block"><img src="images/logo3x.png" alt="" class="image-2 fixed"></a>
-      <div class="menu-button w-nav-button">
-        <div class="icon-5 w-icon-nav-menu"></div>
-      </div>
-      <nav role="navigation" class="nav-menu w-nav-menu">
-        <div data-hover="1" data-delay="0" class="dropdown-4 w-dropdown">
-          <div class="nav-dropdown w-dropdown-toggle">
-            <div class="blue-dropdown w-icon-dropdown-toggle"></div>
-            <div class="text-block-2">服務</div>
-          </div>
-          <nav class="nav-dropdown-list click-collect w-dropdown-list">
-            <div class="dropdown-listbox-arrow"></div>
-            <a href="how-it-works-zh.html" class="nav-dropdown-link-text w-dropdown-link">如何使用</a>
-            <a href="tracking-zh.html" class="nav-dropdown-link-text w-dropdown-link">包裹追蹤</a>
-          
-          </nav>
-        </div>
-        <div class="nav-item">
-          <a href="locations-zh.html" data-w-id="913c62c9-aeb6-f096-8990-edebdeec289d" class="nav-link cyan w-nav-link">取貨點</a>
-          <div class="underline"></div>
-        </div>
-        <div data-hover="1" data-delay="0" class="dropdown-2 w-dropdown">
-          <div class="nav-dropdown w-dropdown-toggle">
-            <div class="blue-dropdown w-icon-dropdown-toggle"></div>
-            <div class="text-block-2">企業方案</div>
-          </div>
-          <nav class="nav-dropdown-list solution w-dropdown-list">
-            <div class="dropdown-listbox-arrow"></div>
-            <a href="for-online-shops-zh.html" class="nav-dropdown-link-text w-dropdown-link">網上商店</a>
-            <a href="for-couriers-zh.html" class="nav-dropdown-link-text w-dropdown-link">物流公司</a>
-          </nav>
-        </div>
-        <div data-hover="1" data-delay="0" class="dropdown w-dropdown">
-          <div class="nav-dropdown w-dropdown-toggle">
-            <div class="blue-dropdown w-icon-dropdown-toggle"></div>
-            <div class="text-block-2">合作加盟</div>
-          </div>
-          <nav class="nav-dropdown-list partnership w-dropdown-list">
-            <div class="dropdown-listbox-arrow"></div>
-            <a href="host-a-locker-zh.html" class="nav-dropdown-link-text w-dropdown-link">擺放智能櫃</a>
-            <a href="pickup-point-zh.html" class="nav-dropdown-link-text w-dropdown-link">成為Alfred自提點</a>
-          </nav>
-        </div>
-        <div class="div-block-85">
-          <div data-hover="" data-delay="0" class="dropdown-3 w-dropdown">
-            <div class="getstarted w-dropdown-toggle">
-              <div class="text-block-109">立即開始</div>
+
+
+    <div class="hero--host-a-locker">
+        <div class="div-block">
+            <div class="div-block-72">
+                <h4 class="tags-3"><strong class="bold-text-12">成為取貨點</strong></h4><img src="images/banner-pattern3x.png" loading="lazy" alt="" class="image-74">
             </div>
-            <nav class="nav-dropdown-list w-dropdown-list">
-              <div class="dropdown-listbox-arrow"></div>
-              <a href="signup/signup-contactinformation-zh.html" class="nav-dropdown-link-text w-dropdown-link">網上商店</a>
-              <a href="for-couriers-zh.html" class="nav-dropdown-link-text w-dropdown-link">物流公司</a>
-              <a href="host-a-locker-zh.html" class="nav-dropdown-link-text w-dropdown-link">擺放智能櫃</a>
-              <a href="pickup-point-zh.html" class="nav-dropdown-link-text w-dropdown-link">成為Alfred自提點</a>
-            </nav>
-          </div>
+            <h2 class="hero-heading-3 small chin">增加店內人流量，加入成為Alfred自提點</h2>
+            <p class="hero-bodytext chin">成為我們的自提點，Alfred的顧客會到您的店舖收取包裹，讓您的店鋪增加人流量。更多元化的店鋪，讓您從競爭對手中突圍而出！</p>
         </div>
-        <div class="div-block-96">
-          <a href="https://alfredhk.pakpobox.com/" class="link-block w-inline-block">
-            <div class="text-block-5">登入</div>
-            <img src="images/login-icon3x_1login-icon@3x.png"  width=30 alt="">          </a>
-        </div>
-        <div data-hover="1" data-delay="0" class="language-selector w-dropdown">
-          <div class="dropdown-toggle-3 w-dropdown-toggle">
-            <div class="grey-dropdown w-icon-dropdown-toggle"></div>
-            <div class="text-block-6">ZH</div>
-          </div>
-          <nav class="nav-dropdown-list w-dropdown-list">
-            <a href="pickup-point.html" class="nav-dropdown-link-text bold w-dropdown-link">EN</a>
-         
-            <div class="dropdown-listbox-arrow"></div>
-          </nav>
-        </div>
-      </nav>
-    </div>
-  </div>
-  <div class="chatbot-button div-block-81">
-    <a href="https://api.whatsapp.com/send?phone=85251777091" target="_blank" class="link-block-8 w-inline-block"></a>
-  </div>
-
-
-  <div class="hero--host-a-locker">
-    <div class="div-block">
-      <div class="div-block-72">
-        <h4 class="tags-3"><strong class="bold-text-12">成為取貨點</strong></h4><img src="images/banner-pattern3x.png" loading="lazy" alt="" class="image-74">
-      </div>
-      <h2 class="hero-heading-3 small chin">增加店內人流量，加入成為Alfred自提點</h2>
-      <p class="hero-bodytext chin">成為我們的自提點，Alfred的顧客會到您的店舖收取包裹，讓您的店鋪增加人流量。更多元化的店鋪，讓您從競爭對手中突圍而出！</p>
-    </div>
-    <div class="div-block-71">
-      <div class="html-embed-how-it-works w-embed"><img src="images/alfred_become_alfred_point_graphic.gif" class="html-embed-how-it-works w-embed" alt=""><!--<video width="100%" autoplay="autoplay" muted="" plays-inline="" loop="">
+        <div class="div-block-71">
+            <div class="html-embed-how-it-works w-embed"><img src="images/alfred_become_alfred_point_graphic.gif" class="html-embed-how-it-works w-embed" alt="">
+                <!--<video width="100%" autoplay="autoplay" muted="" plays-inline="" loop="">
           <source src="https://alfred-website-bucket.s3.ap-northeast-2.amazonaws.com/Alfred+Latest+Videos+%26+Illustrations/Alfred+Point/alfred_become_alfred_point_graphic.v3.mp4" type="video/mp4">
         </video>--></div>
+        </div>
     </div>
-  </div>
-  <div class="alfred-point-why-section">
-    <h2 class="cta-heading cyan">為何成為Alfred自提點？</h2>
-    <div class="w-layout-grid alfred-point-grid">
-      <div id="w-node-0215e3b026fd-3fa4a7b3" class="alfred-point-container"><img src="images/1.png" loading="lazy" alt="" class="why-alfred-point-icon">
-        <h3 class="sub-heading center smaller">增加店鋪人流</h3>
-        <h4 class="body-text-big center">收件人會到您的店鋪取件，從而吸引到更多新顧客</h4>
-      </div>
-      <div id="w-node-0215e3b02704-3fa4a7b3" class="alfred-point-container"><img src="images/2.png" loading="lazy" alt="" class="why-alfred-point-icon">
-        <h3 class="sub-heading center">提升銷量</h3>
-        <h4 class="body-text-big center">將人流轉為額外的銷量</h4>
-      </div>
-      <div id="w-node-0215e3b0270b-3fa4a7b3" class="alfred-point-container"><img src="images/3.png" loading="lazy" alt="" class="why-alfred-point-icon">
-        <h3 class="sub-heading center">額外收入</h3>
-        <h4 class="body-text-big center">每件包裹都可獲取報酬</h4>
-      </div>
-      <div id="w-node-0215e3b02712-3fa4a7b3" class="alfred-point-container"><img src="images/4.png" loading="lazy" alt="" class="why-alfred-point-icon">
-        <h3 class="sub-heading center">與眾不同</h3>
-        <h4 class="body-text-big center">成為您社區的焦點，與顧客建立更好的關係</h4>
-      </div>
-      <div id="w-node-0215e3b02719-3fa4a7b3" class="alfred-point-container"><img src="images/5.png" loading="lazy" alt="" class="why-alfred-point-icon">
-        <h3 class="sub-heading center">免費申請</h3>
-        <h4 class="body-text-big center">成為自提點過程簡單，毋需經驗及任何額外費用</h4>
-      </div>
-      <div id="w-node-0215e3b02720-3fa4a7b3" class="alfred-point-container"><img src="images/6.png" loading="lazy" alt="" class="why-alfred-point-icon">
-        <h3 class="sub-heading center">提升店舖知名度</h3>
-        <h4 class="body-text-big center">您的店鋪名字會出現在1,000+家網店的結帳頁面</h4>
-      </div>
+    <div class="alfred-point-why-section">
+        <h2 class="cta-heading cyan">為何成為Alfred自提點？</h2>
+        <div class="w-layout-grid alfred-point-grid">
+            <div id="w-node-0215e3b026fd-3fa4a7b3" class="alfred-point-container"><img src="images/1.png" loading="lazy" alt="" class="why-alfred-point-icon">
+                <h3 class="sub-heading center smaller">增加店鋪人流</h3>
+                <h4 class="body-text-big center">收件人會到您的店鋪取件，從而吸引到更多新顧客</h4>
+            </div>
+            <div id="w-node-0215e3b02704-3fa4a7b3" class="alfred-point-container"><img src="images/2.png" loading="lazy" alt="" class="why-alfred-point-icon">
+                <h3 class="sub-heading center">提升銷量</h3>
+                <h4 class="body-text-big center">將人流轉為額外的銷量</h4>
+            </div>
+            <div id="w-node-0215e3b0270b-3fa4a7b3" class="alfred-point-container"><img src="images/3.png" loading="lazy" alt="" class="why-alfred-point-icon">
+                <h3 class="sub-heading center">額外收入</h3>
+                <h4 class="body-text-big center">每件包裹都可獲取報酬</h4>
+            </div>
+            <div id="w-node-0215e3b02712-3fa4a7b3" class="alfred-point-container"><img src="images/4.png" loading="lazy" alt="" class="why-alfred-point-icon">
+                <h3 class="sub-heading center">與眾不同</h3>
+                <h4 class="body-text-big center">成為您社區的焦點，與顧客建立更好的關係</h4>
+            </div>
+            <div id="w-node-0215e3b02719-3fa4a7b3" class="alfred-point-container"><img src="images/5.png" loading="lazy" alt="" class="why-alfred-point-icon">
+                <h3 class="sub-heading center">免費申請</h3>
+                <h4 class="body-text-big center">成為自提點過程簡單，毋需經驗及任何額外費用</h4>
+            </div>
+            <div id="w-node-0215e3b02720-3fa4a7b3" class="alfred-point-container"><img src="images/6.png" loading="lazy" alt="" class="why-alfred-point-icon">
+                <h3 class="sub-heading center">提升店舖知名度</h3>
+                <h4 class="body-text-big center">您的店鋪名字會出現在1,000+家網店的結帳頁面</h4>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="alfred-point-partners-section">
-    <h2 class="cta-heading">強大的合作夥伴</h2>
-    <div class="locker-host-wrapper"><img src="images/1logo_1.png" loading="lazy" height="100" alt="" class="locker-host-logo _7eleven"><img src="images/2logo_12logo.png" loading="lazy" height="80" alt="" class="locker-host-logo"><img src="images/image.png" loading="lazy" sizes="(max-width: 767px) 20px, (max-width: 991px) 100vw, (max-width: 1439px) 56px, 60px" srcset="images/image-p-500.png 500w, images/image-p-800.png 800w, images/image.png 838w" alt="" class="locker-host-logo fotomax"></div>
-  </div>
-  <div class="alfred-point-signup-section">
-    <div class="sign-up-wrapper w-row">
-      <div class="column w-col w-col-6 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack">
-        <div class="container-2 w-container">
-          <div class="form-block-2 w-form">
-            <form id="email-form" name="email-form" data-name="Email Form" class="form-8">
-              <div class="div-block-6">
-                <div class="div-block-46"><label for="First-name" class="form-field">Your name</label><input type="text" class="text-field w-input" maxlength="256" name="First-name-2" data-name="First Name 2" placeholder="名字" id="First-name-2"></div>
-                <div class="div-block-60"><input type="text" class="text-field w-input" maxlength="256" name="Last-name-2" data-name="Last Name 2" placeholder="姓氏" id="Last-name-2"></div>
-              </div><label for="email" class="form-field">Contact email</label><input type="email" class="text-field w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="聯絡電郵" id="email-2" required="">
-              <div class="phone-wrapper"><select id="country-code" name="country-code" data-name="country code" class="select-field-2 w-select">
+    <div class="alfred-point-partners-section">
+        <h2 class="cta-heading">強大的合作夥伴</h2>
+        <div class="locker-host-wrapper"><img src="images/1logo_1.png" loading="lazy" height="100" alt="" class="locker-host-logo _7eleven"><img src="images/2logo_12logo.png" loading="lazy" height="80" alt="" class="locker-host-logo"><img src="images/image.png" loading="lazy" sizes="(max-width: 767px) 20px, (max-width: 991px) 100vw, (max-width: 1439px) 56px, 60px"
+                srcset="images/image-p-500.png 500w, images/image-p-800.png 800w, images/image.png 838w" alt="" class="locker-host-logo fotomax"></div>
+    </div>
+    <div class="alfred-point-signup-section">
+        <div class="sign-up-wrapper w-row">
+            <div class="column w-col w-col-6 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack">
+                <div class="container-2 w-container">
+                    <div class="form-block-2 w-form">
+                        <form id="email-form" name="email-form" data-name="Email Form" class="form-8">
+                            <div class="div-block-6">
+                                <div class="div-block-46"><label for="First-name" class="form-field">Your name</label><input type="text" class="text-field w-input" maxlength="256" name="First-name-2" data-name="First Name 2" placeholder="名字" id="First-name-2"></div>
+                                <div class="div-block-60"><input type="text" class="text-field w-input" maxlength="256" name="Last-name-2" data-name="Last Name 2" placeholder="姓氏" id="Last-name-2"></div>
+                            </div><label for="email" class="form-field">Contact email</label><input type="email" class="text-field w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="聯絡電郵" id="email-2" required="">
+                            <div class="phone-wrapper"><select id="country-code" name="country-code" data-name="country code" class="select-field-2 w-select">
                   <option value="+852">+852</option>
                 </select><input type="tel" class="text-field phone w-input" maxlength="256" name="Mobile-2" data-name="Mobile 2" placeholder="聯絡電話" id="Mobile-2" required=""><label for="Mobile" class="form-field">Mobile</label></div>
-                
 
-                <input type="text" class="text-field w-input" maxlength="256" name="Store-name" data-name="Store name" placeholder="您的店鋪名稱" id="Store-name" required="">
-                
-                <label for="Your-address" class="form-field">Where is your store located?</label>
-                <textarea  cols="30" rows="10" type="textarea" class="text-input address w-input" maxlength="256" name="Your-address-2" data-name="Your-address-2" placeholder="地址" id="Your-address-2" required="" ></textarea>
 
-                
-                <label for="Email-3" class="field-label-2">您有做自提點的經驗嗎？</label>
-              <div class="sign-up-form-select-wrapper">
-                <div id="yes" class="sign-up-select-item-2">
-                  <h1 class="sign-up-select-title">有</h1>
-                  <p class="sign-up-select-content-3 hidden">One-line description: lorem ipsum dolor sit amet.</p><img src="images/check-label.svg" loading="lazy" id="yes-tick" alt="" class="sign-up-form-selected-item p1">
-                </div>
-                <div class="_20px-gap"></div>
-                <div id="no" class="sign-up-select-item-2">
-                  <h1 class="sign-up-select-title">沒有</h1>
-                  <p class="sign-up-select-content-3 hidden">One-line description: lorem ipsum dolor sit amet.</p><img src="images/check-label.svg" loading="lazy" id="no-tick" alt="" class="sign-up-form-selected-item p1">
-                </div>
-              </div>
-              <div class="div-block-7">
-                
-                <input type="submit" value="提交" data-wait="Please wait..." class="submit-button-2 hal w-button"></div>
-            </form>
-            <!-- <div class="w-form-done">
+                            <input type="text" class="text-field w-input" maxlength="256" name="Store-name" data-name="Store name" placeholder="您的店鋪名稱" id="Store-name" required="">
+
+                            <label for="Your-address" class="form-field">Where is your store located?</label>
+                            <textarea cols="30" rows="10" type="textarea" class="text-input address w-input" maxlength="256" name="Your-address-2" data-name="Your-address-2" placeholder="地址" id="Your-address-2" required=""></textarea>
+
+
+                            <label for="Email-3" class="field-label-2">您有做自提點的經驗嗎？</label>
+                            <div class="sign-up-form-select-wrapper">
+                                <div id="yes" class="sign-up-select-item-2">
+                                    <h1 class="sign-up-select-title">有</h1>
+                                    <p class="sign-up-select-content-3 hidden">One-line description: lorem ipsum dolor sit amet.</p><img src="images/check-label.svg" loading="lazy" id="yes-tick" alt="" class="sign-up-form-selected-item p1">
+                                </div>
+                                <div class="_20px-gap"></div>
+                                <div id="no" class="sign-up-select-item-2">
+                                    <h1 class="sign-up-select-title">沒有</h1>
+                                    <p class="sign-up-select-content-3 hidden">One-line description: lorem ipsum dolor sit amet.</p><img src="images/check-label.svg" loading="lazy" id="no-tick" alt="" class="sign-up-form-selected-item p1">
+                                </div>
+                            </div>
+                            <div class="div-block-7">
+
+                                <input type="submit" value="提交" data-wait="Please wait..." class="submit-button-2 hal w-button"></div>
+                        </form>
+                        <!-- <div class="w-form-done">
               <div>Thank you! Your submission has been received!</div>
             </div>
             <div class="w-form-fail">
               <div>Thank you! Your submission has been received!</div>
             </div> -->
-          </div>
-        </div>
-      </div>
-      <div class="sign-up-content w-col w-col-6 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack">
-        <h2 class="cta-heading cyan center">立即申請</h2>
-        <p class="body-text signup">加入我們的網絡增加店舖人流。</p>
-        <img src="images/alfred_sign_up_page_alfred_point.v1-01.png" sizes="(max-width: 479px) 100vw, (max-width: 991px) 90vw, (max-width: 1439px) 43vw, (max-width: 1919px) 45vw, 37vw" srcset="images/alfred_sign_up_page_alfred_point.v1-01-p-500.png 500w, images/alfred_sign_up_page_alfred_point.v1-01-p-800.png 800w, images/alfred_sign_up_page_alfred_point.v1-01-p-1080.png 1080w, images/alfred_sign_up_page_alfred_point.v1-01-p-1600.png 1600w, images/alfred_sign_up_page_alfred_point.v1-01-p-2000.png 2000w, images/alfred_sign_up_page_alfred_point.v1-01-p-2600.png 2600w, images/alfred_sign_up_page_alfred_point.v1-01-p-3200.png 3200w, images/alfred_sign_up_page_alfred_point.v1-01.png 4500w" alt="" class="image-7">
-      </div>
-    </div>
-  </div>
-  <div class="cta-cards-section grey">
-    <div class="cta-photo-text-wrapper reverse-on-mobile">
-      <div class="half-width-div">
-        <div class="cta-heading">還有疑問？<br></div>
-        <div class="body-text-big location">我們的智能櫃專家Rubens可為你提供協助。</div>
-        <div data-w-id="cbde0867-d8c4-4e58-313a-77b2db5c76e7" class="arrow-link-container">
-          <a href="mailto:rubens.mak@alfred.delivery" class="link-block-9 w-inline-block">
-            <div id="how-it-works-card-click2" class="arrow-link-text">立即與他聯絡</div>
-            <div class="arrow-link-arrows"><img src="images/right-arrow.svg" loading="lazy" id="how-it-works-card-2-black-arrow" alt="" class="arrow-link-black-arrow"></div>
-          </a>
-        </div>
-      </div>
-      <div class="clients-photo"><img src="images/Rubens-Mak.png" loading="lazy" sizes="(max-width: 479px) 83vw, (max-width: 767px) 70vw, (max-width: 991px) 60vw, (max-width: 1919px) 400px, 26vw" srcset="images/Rubens-Mak-p-500.png 500w, images/Rubens-Mak-p-800.png 800w, images/Rubens-Mak.png 822w" alt=""></div>
-    </div>
-  </div>
-
-  
-  
-
-  <footer id="footer" class="footer">
-    <div class="footer-container"></div>
-    <div class="footer-container">
-      <div class="columns-4 w-row">
-        <div class="column w-col w-col-3">
-          <div class="footer-logo-container"></div>
-          <div class="social-media-links-container">
-            <a href="https://www.facebook.com/alfred.smartlocker/" target="_blank" class="social-link w-inline-block"></a>
-            <a href="https://www.instagram.com/alfred_smartlockers/" target="_blank" class="social-link inst w-inline-block"></a>
-            <a href="https://www.linkedin.com/company/alfred-smart-lockers/" target="_blank" class="social-link linkedin w-inline-block"></a>
-            <a href="https://www.youtube.com/channel/UCSQVgLIQBxKhISg69-_8uXg" target="_blank" class="social-link youtube w-inline-block"></a>
-          </div>
-        </div>
-        <div class="column-13 w-col w-col-5">
-          <div class="footer-heading-container">
-            <h3 class="footer-heading-contactus">導航</h3>
-          </div>
-          <div class="columns-5 w-row">
-            <div class="w-col w-col-6">
-              <div class="navigations-container">
-                <div class="footer-nav-subhead">服務</div>
-                <a href="how-it-works-zh.html" class="link-3">如何使用</a>
-                <a href="tracking-zh.html" class="link-3">追蹤我的包裹</a>
-                <a href="locations-zh.html" class="link-3 bold spacer">取貨點</a>
-                <div class="footer-nav-subhead">企業方案</div>
-                <a href="for-online-shops-zh.html" class="link-3">網上商店</a>
-                <a href="for-couriers-zh.html" class="link-3">物流公司</a>
-                <div class="footer-nav-subhead">合作加盟</div>
-                <a href="host-a-locker-zh.html" class="link-3">擺放智能櫃</a>
-                <a href="pickup-point-zh.html" class="link-3">成為Alfred自提點</a>
-              </div>
+                    </div>
+                </div>
             </div>
-            <div class="w-col w-col-6">
-              <div class="resourses-container">
-                <div class="footer-nav-subhead">資訊</div>
-                <a href="https://alfred-delivery.medium.com/" class="link-3">最新消息</a>
-                <a href="https://www.youtube.com/channel/UCSQVgLIQBxKhISg69-_8uXg" class="link-3">教學</a>
-                <a href="https://www.happyer.io/jobs/pakpobox-hk-business-development-executive"" class="link-3">加入我們</a>
-                <a href="faq-zh.html" class="link-3">常見問題</a>
-                <a href="alfred-terms-of-service-zh.html" class="link-3">服務及使用條款</a>
-                <a href="alfred-privacy-policy-zh.html" class="link-3">隱私政策</a>
-              </div>
+            <div class="sign-up-content w-col w-col-6 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack">
+                <h2 class="cta-heading cyan center">立即申請</h2>
+                <p class="body-text signup">加入我們的網絡增加店舖人流。</p>
+                <img src="images/alfred_sign_up_page_alfred_point.v1-01.png" sizes="(max-width: 479px) 100vw, (max-width: 991px) 90vw, (max-width: 1439px) 43vw, (max-width: 1919px) 45vw, 37vw" srcset="images/alfred_sign_up_page_alfred_point.v1-01-p-500.png 500w, images/alfred_sign_up_page_alfred_point.v1-01-p-800.png 800w, images/alfred_sign_up_page_alfred_point.v1-01-p-1080.png 1080w, images/alfred_sign_up_page_alfred_point.v1-01-p-1600.png 1600w, images/alfred_sign_up_page_alfred_point.v1-01-p-2000.png 2000w, images/alfred_sign_up_page_alfred_point.v1-01-p-2600.png 2600w, images/alfred_sign_up_page_alfred_point.v1-01-p-3200.png 3200w, images/alfred_sign_up_page_alfred_point.v1-01.png 4500w"
+                    alt="" class="image-7">
             </div>
-          </div>
         </div>
-        <div class="column-17 w-col w-col-4">
-          <div class="footer-heading-container">
-            <h3 class="footer-heading-contactus">聯絡我們</h3>
-          </div>
-          <div class="cpntact-us-container">
-            <p class="paragraph-3"><span class="how-it-works-serach-text-span">Pakpobox Hong Kong Ltd.<br></span>香港新界葵涌健康街1號致華工業大廈10樓D室<br>‍<br><span class="how-it-works-serach-text-span">客戶服務WhatsApp:<br></span> <p class="whatsapp-number">+852 51777091</p><br>‍<br><span class="how-it-works-serach-text-span">聯絡我們：</span><br>
-              <a href="mailto:hello@alfred.delivery" class="black-link white">hello@alfred.delivery</a><br><br><span class="text-span-12">Copyright © 2020 Pakpobox Hong Kong Limited. All rights reserved.</span>
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
-  </footer>
-  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5f0e7384784a2c612e5ffbe8" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
-  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-  <style>
-#heading-point-joinalfred{
- color: green;
-}
-#heading-29-merchants{
-}
-</style>
-<script>
-    $('.phone').focus(function(event) {
-    $('#country-code').css('border-color', '#068dc9');
-  });
+    <div class="cta-cards-section grey">
+        <div class="cta-photo-text-wrapper reverse-on-mobile">
+            <div class="half-width-div">
+                <div class="cta-heading">還有疑問？<br></div>
+                <div class="body-text-big location">我們的智能櫃專家Rubens可為你提供協助。</div>
+                <div data-w-id="cbde0867-d8c4-4e58-313a-77b2db5c76e7" class="arrow-link-container">
+                    <a href="mailto:rubens.mak@alfred.delivery" class="link-block-9 w-inline-block">
+                        <div id="how-it-works-card-click2" class="arrow-link-text">立即與他聯絡</div>
+                        <div class="arrow-link-arrows"><img src="images/right-arrow.svg" loading="lazy" id="how-it-works-card-2-black-arrow" alt="" class="arrow-link-black-arrow"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="clients-photo"><img src="images/Rubens-Mak.png" loading="lazy" sizes="(max-width: 479px) 83vw, (max-width: 767px) 70vw, (max-width: 991px) 60vw, (max-width: 1919px) 400px, 26vw" srcset="images/Rubens-Mak-p-500.png 500w, images/Rubens-Mak-p-800.png 800w, images/Rubens-Mak.png 822w"
+                    alt=""></div>
+        </div>
+    </div>
 
-  $('#country-code').focus(function(event) {
-    $('.phone').css('border-color', '#068dc9');
-  });
 
-  $('.phone').focusout(function(event) {
-    $('#country-code').css('border-color', '');
-  });
 
-  $('#country-code').focusout(function(event) {
-    $('.phone').css('border-color', '');
-  });
-  
-  let d = document
-  let ans = "yes"
-  let yes = d.getElementById("yes");
-  let no = d.getElementById("no");
-  let yesTick = d.getElementById("yes-tick")
-  let noTick = d.getElementById("no-tick")
-  yes.addEventListener("click", yesClicked);
-  no.addEventListener("click", noClicked);
-  function yesClicked(){
-      ans = "yes"
-      yes.style.border = "3px solid #068dc9";
-      no.style.border = "3px solid rgba(0,0,0,0)";
-      yesTick.style.display = "inherit";
-      noTick.style.display = "none";
-      console.log("yes")
-  }
-  function noClicked(){
-      ans = "no"        
-      yes.style.border = "3px solid rgba(0,0,0,0)";
-      no.style.border = "3px solid #068dc9";
-      noTick.style.display = "inherit";
-      yesTick.style.display = "none";
-      console.log("no")
-  }
-  function formHandlerFunction() {
-      // respond to the form submit event here
-        localStorage.setItem('ans', ans);
-  }
-  var form = document.getElementById('email-form');
-  form.addEventListener("submit", formHandlerFunction);
-  document.addEventListener("DOMContentLoaded", function(event) { 
-      yesClicked();
-});
-  </script>
+
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5f0e7384784a2c612e5ffbe8 " type="text/javascript " integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=" anonymous "></script>
+    <script src="js/webflow.js " type="text/javascript "></script>
+    <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js "></script><![endif] -->
+    <style>
+        #heading-point-joinalfred {
+            color: green;
+        }
+        
+        #heading-29-merchants {}
+    </style>
+    <script>
+        $('.phone').focus(function(event) {
+            $('#country-code').css('border-color', '#068dc9');
+        });
+
+        $('#country-code').focus(function(event) {
+            $('.phone').css('border-color', '#068dc9');
+        });
+
+        $('.phone').focusout(function(event) {
+            $('#country-code').css('border-color', '');
+        });
+
+        $('#country-code').focusout(function(event) {
+            $('.phone').css('border-color', '');
+        });
+
+        let d = document
+        let ans = "yes "
+        let yes = d.getElementById("yes ");
+        let no = d.getElementById("no ");
+        let yesTick = d.getElementById("yes-tick ")
+        let noTick = d.getElementById("no-tick ")
+        yes.addEventListener("click ", yesClicked);
+        no.addEventListener("click ", noClicked);
+
+        function yesClicked() {
+            ans = "yes "
+            yes.style.border = "3px solid #068dc9 ";
+            no.style.border = "3px solid rgba(0,0,0,0) ";
+            yesTick.style.display = "inherit ";
+            noTick.style.display = "none ";
+            console.log("yes ")
+        }
+
+        function noClicked() {
+            ans = "no "
+            yes.style.border = "3px solid rgba(0,0,0,0) ";
+            no.style.border = "3px solid #068dc9 ";
+            noTick.style.display = "inherit ";
+            yesTick.style.display = "none ";
+            console.log("no ")
+        }
+
+        function formHandlerFunction() {
+            // respond to the form submit event here
+            localStorage.setItem('ans', ans);
+        }
+        var form = document.getElementById('email-form');
+        form.addEventListener("submit ", formHandlerFunction);
+        document.addEventListener("DOMContentLoaded ", function(event) {
+            yesClicked();
+        });
+    </script>
 </body>
+
 </html>
