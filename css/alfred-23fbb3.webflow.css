@@ -8232,8 +8232,7 @@ label.error {
     right: 0%;
 }
 .select-field-2 {
-    /* width: auto; */
-    
+    width: auto;
     height: 50px;
     /* margin-right: auto; */
     
