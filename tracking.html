@@ -42,6 +42,83 @@
 </head>
 
 <body>
+  <div class="alertblock">
+    <div class="text-block">What is Alfred doing amid the Covid-19 pandemic? <a href="https://alfred-delivery.medium.com/alfred%E8%A9%B1%E4%BD%A0%E7%9F%A5-%E5%A6%82%E4%BD%95%E5%9C%A8%E5%85%AC%E5%8F%B8%E6%8A%97%E8%82%BA%E7%82%8E%E7%97%85%E6%AF%92-3814e2158f1a" target="_blank" class="link-2"><span class="how-it-works-serach-text-span">Click to see</span></a> the latest news and updates.</div>
+  </div>
+  <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
+    <div class="nav-container w-container">
+      <a href="index.html" aria-current="page" class="w-inline-block w--current"><img src="images/logo3x.png" alt="" class="image-2 fixed"></a>
+      <div class="menu-button w-nav-button">
+        <div class="icon-5 w-icon-nav-menu"></div>
+      </div>
+      <nav role="navigation" class="nav-menu w-nav-menu">
+        <div data-hover="1" data-delay="0" class="dropdown-6 w-dropdown">
+          <div class="nav-dropdown w-dropdown-toggle">
+            <div class="blue-dropdown w-icon-dropdown-toggle"></div>
+            <div class="text-block-2">Click &amp; Collect</div>
+          </div>
+          <nav class="nav-dropdown-list w-dropdown-list">
+            <div class="dropdown-listbox-arrow"></div>
+            <a href="how-it-works.html" class="nav-dropdown-link-text w-dropdown-link">How it works</a>
+            <a href="tracking.html" class="nav-dropdown-link-text w-dropdown-link">Track my package</a>
+          </nav>
+        </div>
+        <div class="nav-item">
+          <a href="locations.html" class="nav-link cyan w-nav-link">Locations</a>
+          <div class="underline"></div>
+        </div>
+        <div data-hover="1" data-delay="0" class="w-dropdown">
+          <div class="nav-dropdown w-dropdown-toggle">
+            <div class="blue-dropdown w-icon-dropdown-toggle"></div>
+            <div class="text-block-2">Solutions</div>
+          </div>
+          <nav class="nav-dropdown-list w-dropdown-list">
+            <div class="dropdown-listbox-arrow"></div>
+            <a href="for-online-shops.html" class="nav-dropdown-link-text w-dropdown-link">For online shops</a>
+            <a href="for-couriers.html" class="nav-dropdown-link-text w-dropdown-link">For couriers</a>
+          </nav>
+        </div>
+        <div data-hover="1" data-delay="0" class="w-dropdown">
+          <div class="nav-dropdown w-dropdown-toggle">
+            <div class="blue-dropdown w-icon-dropdown-toggle"></div>
+            <div class="text-block-2">Partnerships</div>
+          </div>
+          <nav class="nav-dropdown-list w-dropdown-list">
+            <div class="dropdown-listbox-arrow"></div>
+            <a href="host-a-locker.html" class="nav-dropdown-link-text w-dropdown-link">Host a locker</a>
+            <a href="pickup-point.html" class="nav-dropdown-link-text w-dropdown-link">Become a pickup point</a>
+          </nav>
+        </div>
+        <div data-hover="" data-delay="0" class="dropdown-3 w-dropdown">
+          <div class="getstarted w-dropdown-toggle">
+            <div class="text-block-109">Get Started</div>
+          </div>
+          <nav class="nav-dropdown-list w-dropdown-list">
+            <div class="dropdown-listbox-arrow"></div>
+            <a href="signup/signup-contactinformation.html" class="nav-dropdown-link-text w-dropdown-link">For online shops</a>
+            <a href="for-couriers.html" class="nav-dropdown-link-text w-dropdown-link">For couriers</a>
+            <a href="host-a-locker.html" class="nav-dropdown-link-text w-dropdown-link">Host a locker</a>
+            <a href="pickup-point.html" class="nav-dropdown-link-text w-dropdown-link">Become a pickup point</a>
+          </nav>
+        </div>
+        <div class="div-block-96">
+          <a href="https://alfredhk.pakpobox.com/" class="link-block w-inline-block">
+            <div class="text-block-5 center">Login</div><img src="images/login-icon3x_1login-icon3x.png" alt="" class="image">
+          </a>
+        </div>
+        <div data-hover="1" data-delay="0" class="language-selector w-dropdown">
+          <div class="dropdown-toggle-3 w-dropdown-toggle">
+            <div class="grey-dropdown w-icon-dropdown-toggle"></div>
+            <div class="text-block-6">EN</div>
+          </div>
+          <nav class="nav-dropdown-list w-dropdown-list">
+            <div class="dropdown-listbox-arrow"></div>
+            <a href="tracking-zh.html" class="nav-dropdown-link-text bold w-dropdown-link">ZH</a>
+          </nav>
+        </div>
+      </nav>
+    </div>
+  </div>
   <div class="section tracking-section">
     <div class="boxs-container">
 
@@ -708,14 +785,18 @@
       },
       mounted() {
         this.trackingNumber = localStorage.getItem("trackingID")
-        if (this.trackingNumber.length > 0) {
+        if(this.trackingNumber !== undefined && this.trackingNumber !== null){
+          if (this.trackingNumber.length > 0) {
           this.onTrack()
         }
+        }
+        
         this.inputs.shift()
       },
       watch: {
         trackingNumber: function (newTrackingNumber, oldTrackingNumber) {
-          const totalLine = newTrackingNumber.split(/\r\n|\r|\n/).length;
+          if(newTrackingNumber.length > 0){
+                const totalLine = newTrackingNumber.split(/\r\n|\r|\n/).length;
           if (totalLine > 3) {
             $('.box-number-box #text-input-field').css('height', 20 * totalLine + 'px');
             if (this.firstLoad && $(window).width() > 479) {
@@ -727,6 +808,8 @@
               $('.track-button-text-wrapper').css('height', '');
             }
           }
+          }
+      
         }
       },
     })
